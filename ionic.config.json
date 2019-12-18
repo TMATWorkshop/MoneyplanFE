@@ -1,0 +1,7 @@
+{
+  "name": "moneyplan",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
