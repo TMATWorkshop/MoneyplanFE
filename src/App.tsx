@@ -4,6 +4,7 @@ import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Budget from './components/budget/Budget';
 import Record from './components/transactions/Record';
+import CategoryDetail from './components/budget/CategoryDetail';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -30,6 +31,7 @@ const App: React.FC = () => (
       <IonRouterOutlet>
         <Route path="/budget" component={Budget} exact={true} />
         <Route path="/recordTransaction" component={Record} />
+        <Route path="/categoryDetail" component={CategoryDetail} />
         <Route exact path="/" render={() => <Redirect to="/budget" />} />
       </IonRouterOutlet>
     </IonReactRouter>

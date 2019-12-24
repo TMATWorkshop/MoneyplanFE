@@ -1,30 +1,22 @@
 import React from 'react';
-import {  IonHeader, 
-          IonToolbar, 
-          IonTitle, 
-          IonCardHeader, 
-          IonCardTitle, 
-          IonCard, 
-          IonCardContent, 
-          IonButton, 
-          IonSelect, 
-          IonSelectOption, 
-          IonInput, 
-          IonItem, 
-          IonLabel, 
-          IonContent
-          } 
-          from '@ionic/react';
+import {
+  IonCardHeader,
+  IonCardTitle,
+  IonCard,
+  IonCardContent,
+  IonButton,
+  IonSelect,
+  IonSelectOption,
+  IonInput,
+  IonItem,
+  IonLabel,
+  IonContent
+}
+  from '@ionic/react';
+
+
 
 const Record: React.FC = () => (
-  <>
-    <IonHeader>
-      <IonToolbar>
-        <IonTitle>
-          Transaction
-        </IonTitle>
-      </IonToolbar>
-    </IonHeader>
     <IonContent>
       <IonCard>
 
@@ -64,13 +56,13 @@ const Record: React.FC = () => (
               </IonSelect>
             </IonItem>
             <br />
-            <IonButton color="primary" type="submit" expand="block">Record</IonButton>
+            <IonButton color="primary" type="submit" expand="block">Save</IonButton>
+            <IonButton color="danger" type="button" expand="block" routerLink="/budget" routerDirection="back">Cancel</IonButton>
           </form>
         </IonCardContent>
       </IonCard>
 
     </IonContent>
-  </>
 );
 
 export default Record;

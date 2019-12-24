@@ -1,32 +1,36 @@
 import React from 'react';
 import {
-    IonHeader,
-    IonTitle,
-    IonToolbar,
     IonContent,
     IonList,
     IonListHeader,
-    IonLabel
+    IonLabel,
+    IonIcon, 
+    IonFab,
+    IonFabButton,
+    IonFabList,
+    IonButton
 }
     from '@ionic/react';
-
 import Category from "./Category";
 
-const rentCat = { name: "Rent", amount: "2000"};
-
 const Budget: React.FC = () => (
-    <>
-        <IonHeader>
-            <IonToolbar>
-                <IonTitle>
-                    Budget
-                </IonTitle>
-            </IonToolbar>
-        </IonHeader>
-        <IonContent class="ion-padding">
+        <IonContent fullscreen class="ion-padding">
+            <IonFab horizontal="end" vertical="bottom" slot="fixed">
+                <IonFabButton>
+                    <IonIcon name="add"></IonIcon>
+                </IonFabButton>
+                <IonFabList side="start">
+                    <IonButton type="button" href="/recordTransaction" routerDirection="forward">
+                        Transaction
+                    </IonButton>
+                    <IonButton type="button" href="/categoryDetail" routerDirection="forward">
+                        Category
+                    </IonButton>
+                </IonFabList>
+            </IonFab>
             <IonList>
                 <IonListHeader>
-                    <IonLabel>Categories</IonLabel>
+                    <IonLabel>Categories</IonLabel>                    
                 </IonListHeader>
                 <Category name="Rent" amount="2000"></Category>
                 <Category name="Internet" amount="104.93"></Category>
@@ -39,7 +43,6 @@ const Budget: React.FC = () => (
                 <Category name="PH Tax" amount="35"></Category>
             </IonList>
         </IonContent>
-    </>
 );
 
 export default Budget;
